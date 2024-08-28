@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #c8b6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-name {
+  width: inherit;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  background: #9b5de5;
+  border-bottom: 1px solid purple;
+}
+.page-name p {
+  font-size: 70px;
+}
+
+.search-box {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.search-box .get-name {
+  width: 400px;
+  height: 50px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 22px;
+}
+
+.search-box .search-btn {
+  height: 50px;
+  width: 110px;
+  margin-left: 30px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.search-box .search-btn:hover {
+  transform: scale(1.04);
+}
+
+/* ********** Error box css *****************/
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  width: 700px;
+  height: 80px;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #b47ff5;
+  border-radius: 6px;
+}
+
+.error p {
+  font-size: 22px;
+}
+.info-box {
+  visibility: hidden;
+  position: absolute;
+  width: 800px;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.head-row {
+  height: 200px;
+  width: inherit;
+  display: flex;
+}
+.poster {
+  width: 150px;
+  height: inherit;
+  background-image: url('./pink-2893502.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 6px;
+}
+
+.head-container{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  width: calc(100% - 150px);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px;
+  font-size: 28px;
+  font-weight: 500;
+  background: #b47ff5;
+  border-radius: 6px;
+}
+.head-child{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.head-child .child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.year,
+.rated,
+.imdb{
+  background: #b47ff5;
+  font-size: 36px;
+  font-weight: 6000;
+  margin: 0 14px 14px 14px;
+  border-radius: 6px;
+}
+
+.rest-data {
+  display: grid;
+  grid-template-rows: repeat(5, 45px);
+  font-size: 20px;
+  font-weight: 400;
+  row-gap: 10px;
+  padding: 14px;
+  align-items: center;
+}
+.director,
+.country,
+.box-office,
+.runtime,
+.released{
+  background: #b47ff5;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.awards{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  font-size: 18px;
+  background: #b47ff5;
+  border-radius: 6px;
+}
