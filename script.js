@@ -1,8 +1,29 @@
-const searchBtn = document.querySelector(".search-btn");
+const hideMessage = () => {
+  document.querySelector(".message-box").style.display = "none"
+};
+
+document
+  .querySelector(".message-box .fa-xmark")
+  .addEventListener("click", hideMessage);
+
 function mainFun() {
-  const getName = document.querySelector(".get-name");
+  const infoBox = document.querySelector(".info-box");
+  const errorMsg = document.querySelector(".error-box");
+  const infoHead = document.querySelector(".poster");
+  const getName = document.querySelector(".input-box");
   const movieName = getName.value;
   getName.value = "";
+
+
+  function displayFun(data){
+    if (data != null) {
+      infoBox.style.display = "flex";
+      errorMsg.style.display = "none";
+    } else {
+      infoBox.style.display = "none";
+      errorMsg.style.display = "flex";
+    }
+  };
 
   async function fetchMovieData(movieTitle) {
     const apiKey = "6dbe9c8e";
@@ -32,11 +53,7 @@ function mainFun() {
 
   async function displaying(movieName) {
     const data = await fetchMovieData(movieName);
-    const infoBox = document.querySelector(".info-box");
-    const error = document.querySelector(".error");
-    const errorp = document.querySelector(".error p");
-    const posterChange = document.querySelector('.poster');
-
+    
     const targetName = [
       "title",
       "year",
@@ -55,16 +72,13 @@ function mainFun() {
       getTarget[fildClass] = document.getElementsByClassName(fildClass);
     });
 
-    
-
     if (data == null) {
-      error.style.visibility = "visible";
-      infoBox.style.visibility = "hidden";
-      errorp.innerHTML = `"${movieName}"  Not Found 😞`;
+      displayFun(data);
+      const temp = document.querySelector(".error-box p");
+      temp.innerHTML = `"${movieName}" Not Found!`;
     } else {
-      infoBox.style.visibility = "visible";
-      error.style.visibility = "hidden";
-      posterChange.style.background = `url('${data["Poster"]})`;
+      displayFun(data);
+      infoHead.style.background = `url('${data["Poster"]})`;
 
       const topics = [
         "Title",
@@ -78,21 +92,20 @@ function mainFun() {
         "BoxOffice",
         "Awards",
       ];
-      const finalData = []
-      topics.forEach(element => {
-        finalData.push(data[element])
-      });
-      
-      let j = 0
 
+      const finalData = [];
+      topics.forEach((element) => {
+        finalData.push(data[element]);
+      });
+
+      let j = 0;
       Object.keys(getTarget).forEach((key) => {
         const elements = getTarget[key];
         for (let i = 0; i < elements.length; i++) {
-          if (j<4) {
-             elements[i].innerHTML = `${finalData[j]}`;
-             j++;
-          }
-          else{
+          if (j < 4) {
+            elements[i].innerHTML = `${finalData[j]}`;
+            j++;
+          } else {
             elements[i].innerHTML = `${topics[j]}: ${finalData[j]}`;
             j++;
           }
@@ -103,6 +116,17 @@ function mainFun() {
 
   displaying(movieName);
 }
-searchBtn.addEventListener("click", mainFun);
 
+document.querySelector('label i').addEventListener('click' , function(){
+  hideMessage()
+  mainFun()
+});
+
+ document
+   .getElementById("in-box")
+   .addEventListener("keydown", function (event) {
+     if (event.key === "Enter") {
+       event.preventDefault();
+     }
+   });
 

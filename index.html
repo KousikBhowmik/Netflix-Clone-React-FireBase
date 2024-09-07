@@ -5,40 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INFO DOT WHY</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="page-name">
-      <p>INFO DOT WHY</p>
+    <form class="search-box">
+      <input
+        id="in-box"
+        class="input-box"
+        type="text"
+        placeholder="search here"
+      />
+      <label for="#"><i class="fa-solid fa-magnifying-glass"></i></label>
+      <button type="reset" class="reset-box">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </form>
+
+    <div class="message-box">
+      <p>
+        This is a Movie & Web-series search application using the OMDB API (from
+        omdbapi.com). Please make sure the spelling of the content is correct,
+        or no results will be shown. Thank you for using this webpage!
+      </p>
+      <i class="fa-solid fa-xmark"></i>
     </div>
-    <div class="search-box">
-      <input class="get-name" type="text" placeholder="Enter movie name" />
-      <button class="search-btn">Search</button>
+
+    <div class="error-box">
+      <p></p>
     </div>
-    <div class="wrapper">
-      <div class="error"><p>zzz</p></div>
-      <div class="info-box">
-        <div class="head-row">
-          <div class="poster"></div>
-          <div class="head-container">
-            <div class="title">Title</div>
-            <div class="head-child">
-              <div class="child year">2022</div>
-              <div class="child imdb">8.2</div>
-              <div class="child rated">PG-13</div>
-            </div>
-          </div>
+
+    <div class="info-box">
+      <div class="info-head">
+        <div class="poster"></div>
+        <div class="head-child">
+          <div class="title">Content Name</div>
+          <div class="year">0000</div>
+          <div class="imdb">0.0</div>
+          <div class="rated">Rated</div>
         </div>
-        <div class="rest-data">
-          <div class="director">Kousik Bhowmik</div>
-          <div class="country">India usa Lorem ipsum dolor sit.</div>
-          <div class="box-office">88888888888</div>
-          <div class="runtime">242</div>
-          <div class="released">23-12-2023</div>
-          <div class="awards">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-            delectus maxime ullam rem in nulla accusantium reiciendis odit amet
-            asperiores.
-          </div>
+      </div>
+      <div class="info-body">
+        <div class="director">Director Name</div>
+        <div class="country">Country Name</div>
+        <div class="box-office">00000000</div>
+        <div class="runtime">140</div>
+        <div class="released">00-00-0000</div>
+        <div class="awards">
+          oscar emmy all other awards , award by vote etc
         </div>
       </div>
     </div>
