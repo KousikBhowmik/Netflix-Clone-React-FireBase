@@ -27,7 +27,7 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px #000000;
 }
-.search-box .input-box{
+.search-box .input-box {
   padding-left: 26px;
   width: 400px;
   height: 45px;
@@ -36,13 +36,13 @@ body {
   border: none;
   background: none;
 }
-.search-box label{
+.search-box label {
   display: block;
   width: auto;
   height: fit-content;
   cursor: pointer;
 }
-.search-box i{
+.search-box i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@ body {
   color: black;
   font-size: 22px;
 }
-.reset-box{
+.reset-box {
   color: rgb(162, 162, 162);
   cursor: pointer;
   background: none;
@@ -68,7 +68,7 @@ body {
 
 /* ********* message box *********** */
 
-.message-box{
+.message-box {
   margin: 0 24px;
   background: #fff;
   border-radius: 4px;
@@ -83,7 +83,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.message-box .fa-xmark{
+.message-box .fa-xmark {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
@@ -93,7 +93,7 @@ body {
 
 /* ******** Error Box ******** */
 
-.error-box{
+.error-box {
   position: absolute;
   top: 25vh;
   width: auto;
@@ -113,7 +113,7 @@ body {
 
 /* ********** Information BOX *********** */
 
-.info-box{
+.info-box {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -128,25 +128,24 @@ body {
   box-shadow: 0 0 10px #000000bb;
 }
 
-.info-box .info-head{
+.info-box .info-head {
   max-height: 200px;
   display: flex;
   width: 100%;
-  
 }
 
-.info-head .poster{
+.info-head .poster {
   min-width: 150px;
-  height:200px;
+  height: 200px;
   margin-right: 10px;
-  background-image: url('./img/bg-imgae.jpeg');
+  background-image: url("./img/bg-imgae.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 4px;
 }
 
-.info-head .head-child{
+.info-head .head-child {
   width: calc(100% - 150px);
   display: flex;
   justify-content: space-between;
@@ -155,8 +154,7 @@ body {
   font-weight: bold;
 }
 
-
-.info-box .info-body{
+.info-box .info-body {
   display: flex;
   flex-direction: column;
   font-size: 18px;
@@ -164,25 +162,54 @@ body {
   margin-top: 10px;
 }
 
-
 /* ******* Responsive design ********** */
 
-@media (max-width: 300px){
+@media (max-width: 300px) {
+  .search-box {
+    margin: 18px;
+    border-radius: 24px;
+  }
+  .search-box .input-box {
+    padding-left: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .search-box i {
+    height: 40px;
+    width: 50px;
+    font-size: 18px;
+  }
   .message-box,
-  .error-box{
+  .error-box {
     padding: 30px;
   }
 }
 
-@media (min-width: 300px) and (max-width: 400px){
+@media (min-width: 300px) and (max-width: 400px) {
+  .search-box {
+    margin: 18px;
+    border-radius: 24px;
+  }
+  .search-box .input-box {
+    padding-left: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .search-box i {
+    height: 40px;
+    width: 50px;
+    font-size: 18px;
+  }
   .message-box,
-  .error-box{
+  .error-box {
     padding: 30px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1110px){
-  .info-box{
-  min-width: 500px;
-}
+@media (min-width: 768px) and (max-width: 1110px) {
+  .info-box {
+    min-width: 500px;
+  }
 }
