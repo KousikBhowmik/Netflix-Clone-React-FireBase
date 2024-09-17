@@ -165,7 +165,10 @@ body {
 /* ******* Responsive design ********** */
 
 @media (max-width: 300px) {
-
+  .search-box {
+    margin: 18px;
+    border-radius: 24px;
+  }
   .search-box .input-box {
     padding-left: 20px;
     width: 200px;
@@ -183,7 +186,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 576) {
+@media (min-width: 300px) and (max-width: 400px) {
   .search-box {
     margin: 18px;
     border-radius: 24px;
@@ -210,5 +213,3 @@ body {
     min-width: 500px;
   }
 }
-
-
