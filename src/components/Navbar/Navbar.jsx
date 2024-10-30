@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
 import assets from '../../assets/assets.js'
 
 
 
 const Navbar = () => {
+
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY >= 350){
+        navRef.current.classList.add('nav-dark')
+      }else{
+        navRef.current.classList.remove("nav-dark");
+      }
+    })
+  }, [])
+
+
   return (
-    <div className="navbar">
+    <div ref={navRef} className="navbar">
       <div className="navbar-left">
         <img src={assets.logo} />
         <ul>
