@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
 import assets from '../../assets/assets.js'
+import { logOut } from '../../firebase.js';
 
 
 
@@ -40,7 +41,7 @@ const Navbar = () => {
           <img src={assets.profile_img} className="profile" />
           <img src={assets.caret_icon}  />
           <div className="dropdown">
-            <p>Sing out of Netflix</p>
+            <p onClick={() => {logOut()}} >Sing out of Netflix</p>
           </div>
         </div>
       </div>

@@ -90,3 +90,16 @@
     font-weight: 400;
     cursor: pointer;
 }
+
+.loading-spinner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading-spinner img{
+    width: 60px;
+}

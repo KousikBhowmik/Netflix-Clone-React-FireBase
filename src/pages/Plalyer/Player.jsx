@@ -15,13 +15,14 @@ const Player = () => {
     published_at: "",
     type: "",
   });
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NGQ3OGIyNDU4MWU3ZTk0OTE2YmViMTIxMGI3MDMxNiIsIm5iZiI6MTczMDMwODQ3OS44NDYxOTg4LCJzdWIiOiI2NzE5MjFiNTc2OTEwN2Q3N2I0NzYzMDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.u-uBRmQjfX9k4m-FXvIkKKdedHtmBGgW04dgwsaosec",
+        apiKey,
     },
   };
 
