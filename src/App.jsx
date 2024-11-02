@@ -16,10 +16,8 @@ const App = () => {
   useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
       if(user){
-        console.log("loged in");
         navGate('/')
       }else{
-        console.log("loged out");
         navGate('/login')
       }
     })
